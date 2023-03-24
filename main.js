@@ -32,11 +32,16 @@ function toggleMobileMenu() {
 
 function toggleCarritoAside() {
   const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-  
+  const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
+
   if (!isMobileMenuClosed) {
     mobileMenu.classList.add('inactive'); 
   }
   
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add('inactive'); 
+  }
+
   shoppingCartContainer.classList.toggle('inactive');
 }
 
